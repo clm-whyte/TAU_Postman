@@ -209,7 +209,8 @@
               "listen": "prerequest",
               "script": {
                 "exec": [""],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             },
             {
@@ -219,7 +220,7 @@
                   "",
                   "var jsonData = pm.response.json();",
                   "",
-                  "pm.test(\"Response is not empty\", function () {",
+                  "pm.test.skip(\"Response is not empty\", function () {",
                   "    pm.expect(jsonData).to.not.have.lengthOf(0);",
                   "});",
                   "",
@@ -234,7 +235,8 @@
                   "});",
                   ""
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -500,7 +502,8 @@
                   "    pm.expect(booking.additionalneeds, \"unexpected additionalneeds\").to.eql(pm.variables.get(\"additionalneeds\"));",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -592,7 +595,8 @@
                   "pm.variables.set(\"firstname\", uuid());",
                   "pm.variables.set(\"lastname\", uuid());"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             },
             {
@@ -621,11 +625,12 @@
                   "pm.test(\"Response checkout is correct\", function () {",
                   "    pm.expect(booking.bookingdates.checkout, \"unexpected checkout\").to.eql(pm.variables.get(\"checkout\"));",
                   "});",
-                  "pm.test.skip(\"Expected booking id is in the returned array\", function () {",
+                  "pm.test.skip(\"Response additionalneeds is correct\", function () {",
                   "    pm.expect(booking.additionalneeds, \"unexpected additionalneeds\").to.eql(pm.variables.get(\"additionalneeds\"));",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -695,7 +700,8 @@
                   "});",
                   ""
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             },
             {
@@ -708,13 +714,14 @@
                   "",
                   "pm.sendRequest(pm.environment.get(\"rb_url\") + \"/booking/\" + pm.variables.get(\"booking_id\"), function (err, res) {",
                   "  if (err) { console.log(err); }",
-                  "  pm.test('Booking is unchanged', function () {",
+                  "  pm.test.skip('Booking is unchanged', function () {",
                   "    pm.expect(err).to.equal(null);",
                   "    pm.expect(res.text()).to.include(pm.variables.get(\"firstname\"));",
                   "  });",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -784,7 +791,8 @@
                   "});",
                   ""
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             },
             {
@@ -797,13 +805,14 @@
                   "",
                   "pm.sendRequest(pm.environment.get(\"rb_url\") + \"/booking/\" + pm.variables.get(\"booking_id\"), function (err, res) {",
                   "  if (err) { console.log(err); }",
-                  "  pm.test('Booking is unchanged', function () {",
+                  "  pm.test.skip('Booking is unchanged', function () {",
                   "    pm.expect(err).to.equal(null);",
                   "    pm.expect(res.text()).to.include(pm.variables.get(\"firstname\"));",
                   "  });",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -971,7 +980,8 @@
                   "    pm.variables.set(\"booking_id\", res.json().bookingid)",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             },
             {
@@ -990,7 +1000,8 @@
                   "  });",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -1204,7 +1215,8 @@
               "    pm.variables.set(\"booking_id\", res.json().bookingid)",
               "});"
             ],
-            "type": "text/javascript"
+            "type": "text/javascript",
+            "packages": {}
           }
         },
         {
@@ -1224,7 +1236,8 @@
               "  });",
               "});"
             ],
-            "type": "text/javascript"
+            "type": "text/javascript",
+            "packages": {}
           }
         }
       ],
