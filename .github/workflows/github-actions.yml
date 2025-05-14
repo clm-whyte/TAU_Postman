@@ -13,4 +13,4 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Run API Tests
-        run: newman run RestfulBookerBVT.postman_collection.json -e Production.postman_environment.json
+        run: newman run "Restful Booker BVT.postman_collection.json" -e Production.postman_environment.json

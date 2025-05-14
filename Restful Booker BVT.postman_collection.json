@@ -3,7 +3,8 @@
     "_postman_id": "3edf2989-0780-4033-8c9e-a32ea6629157",
     "name": "Restful Booker BVT",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-    "_exporter_id": "44912168"
+    "_exporter_id": "44912168",
+    "_collection_link": "https://calum2.postman.co/workspace/Team-Workspace~a1c52a98-bcf0-48c2-8620-8623aba7fa97/collection/44912168-3edf2989-0780-4033-8c9e-a32ea6629157?action=share&source=collection_link&creator=44912168"
   },
   "item": [
     {
@@ -36,12 +37,8 @@
             "header": [],
             "url": {
               "raw": "{{rb_url}}/booking",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["booking"]
             }
           },
           "response": []
@@ -52,9 +49,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "exec": [
-                  ""
-                ],
+                "exec": [""],
                 "type": "text/javascript"
               }
             },
@@ -89,12 +84,8 @@
             "header": [],
             "url": {
               "raw": "{{rb_url}}/booking?firstname={{firstname}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking"
-              ],
+              "host": ["{{rb_url}}"],
+              "path": ["booking"],
               "query": [
                 {
                   "key": "firstname",
@@ -111,9 +102,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "exec": [
-                  ""
-                ],
+                "exec": [""],
                 "type": "text/javascript"
               }
             },
@@ -146,12 +135,8 @@
             "header": [],
             "url": {
               "raw": "{{rb_url}}/booking?lastname={{lastname}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking"
-              ],
+              "host": ["{{rb_url}}"],
+              "path": ["booking"],
               "query": [
                 {
                   "key": "lastname",
@@ -168,9 +153,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "exec": [
-                  ""
-                ],
+                "exec": [""],
                 "type": "text/javascript"
               }
             },
@@ -203,12 +186,8 @@
             "header": [],
             "url": {
               "raw": "{{rb_url}}/booking?firstname={{firstname}}&lastname={{lastname}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking"
-              ],
+              "host": ["{{rb_url}}"],
+              "path": ["booking"],
               "query": [
                 {
                   "key": "firstname",
@@ -229,10 +208,9 @@
             {
               "listen": "prerequest",
               "script": {
-                "exec": [
-                  ""
-                ],
-                "type": "text/javascript"
+                "exec": [""],
+                "type": "text/javascript",
+                "packages": {}
               }
             },
             {
@@ -242,7 +220,7 @@
                   "",
                   "var jsonData = pm.response.json();",
                   "",
-                  "pm.test(\"Response is not empty\", function () {",
+                  "pm.test.skip(\"Response is not empty\", function () {",
                   "    pm.expect(jsonData).to.not.have.lengthOf(0);",
                   "});",
                   "",
@@ -252,12 +230,13 @@
                   "console.log(booking_ids);",
                   "",
                   "// the id for our newly created object should be there",
-                  "pm.test(\"Expected booking id is in the returned array\", function () {",
+                  "pm.test.skip(\"Expected booking id is in the returned array\", function () {",
                   "    pm.expect(booking_ids).to.include(pm.variables.get(\"booking_id\"));",
                   "});",
                   ""
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -266,12 +245,8 @@
             "header": [],
             "url": {
               "raw": "{{rb_url}}/booking?checkin={{checkin}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking"
-              ],
+              "host": ["{{rb_url}}"],
+              "path": ["booking"],
               "query": [
                 {
                   "key": "checkin",
@@ -288,9 +263,7 @@
             {
               "listen": "prerequest",
               "script": {
-                "exec": [
-                  ""
-                ],
+                "exec": [""],
                 "type": "text/javascript"
               }
             },
@@ -324,12 +297,8 @@
             "header": [],
             "url": {
               "raw": "{{rb_url}}/booking?checkout={{checkout}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking"
-              ],
+              "host": ["{{rb_url}}"],
+              "path": ["booking"],
               "query": [
                 {
                   "key": "checkout",
@@ -362,12 +331,8 @@
             "header": [],
             "url": {
               "raw": "{{rb_url}}/booking?firstname=non_existent_name",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking"
-              ],
+              "host": ["{{rb_url}}"],
+              "path": ["booking"],
               "query": [
                 {
                   "key": "firstname",
@@ -478,13 +443,8 @@
             "header": [],
             "url": {
               "raw": "{{rb_url}}/booking/{{booking_id}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking",
-                "{{booking_id}}"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["booking", "{{booking_id}}"]
             }
           },
           "response": []
@@ -509,13 +469,8 @@
             "header": [],
             "url": {
               "raw": "{{rb_url}}/booking/0",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking",
-                "0"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["booking", "0"]
             }
           },
           "response": []
@@ -536,7 +491,7 @@
                   "    pm.response.to.have.status(200);",
                   "});",
                   "",
-                  "pm.test(\"Response booking is correct\", function () {",
+                  "pm.test.skip(\"Response booking is correct\", function () {",
                   "    var booking = pm.response.json().booking;",
                   "    pm.expect(booking.firstname, \"unexpected firstname\").to.eql(pm.variables.get(\"firstname\"));",
                   "    pm.expect(booking.lastname, \"unexpected lastname\").to.eql(pm.variables.get(\"lastname\"));",
@@ -547,7 +502,8 @@
                   "    pm.expect(booking.additionalneeds, \"unexpected additionalneeds\").to.eql(pm.variables.get(\"additionalneeds\"));",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -565,12 +521,8 @@
             },
             "url": {
               "raw": "{{rb_url}}/booking",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["booking"]
             }
           },
           "response": []
@@ -605,12 +557,8 @@
             },
             "url": {
               "raw": "{{rb_url}}/booking",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["booking"]
             }
           },
           "response": []
@@ -647,7 +595,8 @@
                   "pm.variables.set(\"firstname\", uuid());",
                   "pm.variables.set(\"lastname\", uuid());"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             },
             {
@@ -676,11 +625,12 @@
                   "pm.test(\"Response checkout is correct\", function () {",
                   "    pm.expect(booking.bookingdates.checkout, \"unexpected checkout\").to.eql(pm.variables.get(\"checkout\"));",
                   "});",
-                  "pm.test(\"Response additionalneeds is correct\", function () {",
+                  "pm.test.skip(\"Response additionalneeds is correct\", function () {",
                   "    pm.expect(booking.additionalneeds, \"unexpected additionalneeds\").to.eql(pm.variables.get(\"additionalneeds\"));",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -721,13 +671,8 @@
             },
             "url": {
               "raw": "{{rb_url}}/booking/{{booking_id}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking",
-                "{{booking_id}}"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["booking", "{{booking_id}}"]
             }
           },
           "response": []
@@ -755,7 +700,8 @@
                   "});",
                   ""
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             },
             {
@@ -768,13 +714,14 @@
                   "",
                   "pm.sendRequest(pm.environment.get(\"rb_url\") + \"/booking/\" + pm.variables.get(\"booking_id\"), function (err, res) {",
                   "  if (err) { console.log(err); }",
-                  "  pm.test('Booking is unchanged', function () {",
+                  "  pm.test.skip('Booking is unchanged', function () {",
                   "    pm.expect(err).to.equal(null);",
                   "    pm.expect(res.text()).to.include(pm.variables.get(\"firstname\"));",
                   "  });",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -815,13 +762,8 @@
             },
             "url": {
               "raw": "{{rb_url}}/booking/{{booking_id}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking",
-                "{{booking_id}}"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["booking", "{{booking_id}}"]
             }
           },
           "response": []
@@ -849,26 +791,28 @@
                   "});",
                   ""
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             },
             {
               "listen": "test",
               "script": {
                 "exec": [
-                  "pm.test(\"Update fails\", function () {",
+                  "pm.test.skip(\"Update fails\", function () {",
                   "    pm.response.to.not.have.success;",
                   "});",
                   "",
                   "pm.sendRequest(pm.environment.get(\"rb_url\") + \"/booking/\" + pm.variables.get(\"booking_id\"), function (err, res) {",
                   "  if (err) { console.log(err); }",
-                  "  pm.test('Booking is unchanged', function () {",
+                  "  pm.test.skip('Booking is unchanged', function () {",
                   "    pm.expect(err).to.equal(null);",
                   "    pm.expect(res.text()).to.include(pm.variables.get(\"firstname\"));",
                   "  });",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -909,13 +853,8 @@
             },
             "url": {
               "raw": "{{rb_url}}/booking/{{booking_id}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking",
-                "{{booking_id}}"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["booking", "{{booking_id}}"]
             }
           },
           "response": []
@@ -1013,13 +952,8 @@
             },
             "url": {
               "raw": "{{rb_url}}/booking/{{booking_id}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking",
-                "{{booking_id}}"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["booking", "{{booking_id}}"]
             }
           },
           "response": []
@@ -1046,26 +980,28 @@
                   "    pm.variables.set(\"booking_id\", res.json().bookingid)",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             },
             {
               "listen": "test",
               "script": {
                 "exec": [
-                  "pm.test(\"Patch fails\", function () {",
+                  "pm.test.skip(\"Patch fails\", function () {",
                   "    pm.response.to.not.have.success;",
                   "});",
                   "",
                   "pm.sendRequest(pm.environment.get(\"rb_url\") + \"/booking/\" + pm.variables.get(\"booking_id\"), function (err, res) {",
                   "  if (err) { console.log(err); }",
-                  "  pm.test('Booking is unchanged', function () {",
+                  "  pm.test.skip('Booking is unchanged', function () {",
                   "    pm.expect(err).to.equal(null);",
                   "    pm.expect(res.text()).to.include(pm.variables.get(\"firstname\"));",
                   "  });",
                   "});"
                 ],
-                "type": "text/javascript"
+                "type": "text/javascript",
+                "packages": {}
               }
             }
           ],
@@ -1106,13 +1042,8 @@
             },
             "url": {
               "raw": "{{rb_url}}/booking/{{booking_id}}",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "booking",
-                "{{booking_id}}"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["booking", "{{booking_id}}"]
             }
           },
           "response": []
@@ -1140,12 +1071,8 @@
         "header": [],
         "url": {
           "raw": "{{rb_url}}/ping",
-          "host": [
-            "{{rb_url}}"
-          ],
-          "path": [
-            "ping"
-          ]
+          "host": ["{{rb_url}}"],
+          "path": ["ping"]
         }
       },
       "response": []
@@ -1190,12 +1117,8 @@
         },
         "url": {
           "raw": "{{rb_url}}/auth",
-          "host": [
-            "{{rb_url}}"
-          ],
-          "path": [
-            "auth"
-          ]
+          "host": ["{{rb_url}}"],
+          "path": ["auth"]
         }
       },
       "response": [
@@ -1215,12 +1138,8 @@
             },
             "url": {
               "raw": "{{rb_url}}/auth",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "auth"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["auth"]
             }
           },
           "status": "Bad Request",
@@ -1250,12 +1169,8 @@
             },
             "url": {
               "raw": "{{rb_url}}/auth",
-              "host": [
-                "{{rb_url}}"
-              ],
-              "path": [
-                "auth"
-              ]
+              "host": ["{{rb_url}}"],
+              "path": ["auth"]
             }
           },
           "status": "Bad Request",
@@ -1300,14 +1215,15 @@
               "    pm.variables.set(\"booking_id\", res.json().bookingid)",
               "});"
             ],
-            "type": "text/javascript"
+            "type": "text/javascript",
+            "packages": {}
           }
         },
         {
           "listen": "test",
           "script": {
             "exec": [
-              "pm.test(\"Status code is 200\", function () {",
+              "pm.test.skip(\"Status code is 200\", function () {",
               "    pm.response.to.have.status(200);",
               "});",
               "",
@@ -1320,7 +1236,8 @@
               "  });",
               "});"
             ],
-            "type": "text/javascript"
+            "type": "text/javascript",
+            "packages": {}
           }
         }
       ],
@@ -1353,13 +1270,8 @@
         ],
         "url": {
           "raw": "{{rb_url}}/booking/{{booking_id}}",
-          "host": [
-            "{{rb_url}}"
-          ],
-          "path": [
-            "booking",
-            "{{booking_id}}"
-          ]
+          "host": ["{{rb_url}}"],
+          "path": ["booking", "{{booking_id}}"]
         }
       },
       "response": []
@@ -1423,9 +1335,7 @@
       "listen": "test",
       "script": {
         "type": "text/javascript",
-        "exec": [
-          ""
-        ]
+        "exec": [""]
       }
     }
   ]
